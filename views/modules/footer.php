@@ -1,6 +1,6 @@
 <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
     </div>
-    <strong>Copyright &copy; 2022 <a href="#">ADSI 2022</a>.</strong> Open source
+    <strong>Copyright &copy; 2022 <a href="https://adminlte.io">POS - ADSI</a>.</strong> All rights reserved.
   </footer>

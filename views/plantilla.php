@@ -1,110 +1,98 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Blank Page</title>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>POS | ADSI</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-    <!-- CSS -->
-
-  <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="views/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="views/bower_components/font-awesome/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="views/dist/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="views/dist/css/AdminLTE.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="views/dist/css/skins/_all-skins.min.css">
-
-
-
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <!-- <link rel="stylesheet" href="views/dist/css/adminlte.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
 </head>
-
-
-<body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
+<body class="hold-transition sidebar-mini login-page">
 <!-- Site wrapper -->
-<div class="wrapper">
-
-
-    <?php
-
-        include 'modules/header.php';
-
-        include 'modules/sideBar.php';
-
-        if(isset($_GET["path"])){
-
-            switch ($_GET["path"]) {
-                case 'home':
-                    include 'modules/'.$_GET["path"].'.php';
-                    break;
-                case 'usuarios':
-                    include 'modules/'.$_GET["path"].'.php';
-                    break;
-                case 'categorias':
-                    include 'modules/'.$_GET["path"].'.php';
-                    break;
-                case 'productos':
-                    include 'modules/'.$_GET["path"].'.php';
-                    break;
-                case 'clientes':
-                    include 'modules/'.$_GET["path"].'.php';
-                    break;
-                case 'ventas':
-                    include 'modules/'.$_GET["path"].'.php';
-                    break;
-                case 'crear-venta':
-                    include 'modules/'.$_GET["path"].'.php';
-                    break;
-                case 'reportes':
-                    include 'modules/'.$_GET["path"].'.php';
-                    break;
-
-                
-                default:
-                    include 'modules/404.php';
-                    break;
-            }
-
-            if($_GET["path"]=="home")
-                include 'modules/home.php';
-        }
-
-
-        include 'modules/footer.php';
-
-    ?>
-
+<!-- Navbar -->
+<?php 
+  if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"]=='ok'){
+      echo '<div class="wrapper">';
   
-  <!-- ====================HEADER=========================== -->
+    include 'modules/header.php'; 
+
+   include 'modules/sideBar.php'; 
+
+   if(isset($_GET["path"])){
+
+    switch ($_GET["path"]) {
+        case 'home':
+            include 'modules/'.$_GET["path"].'.php';
+            break;
+        case 'usuarios':
+            include 'modules/'.$_GET["path"].'.php';
+            break;
+        case 'categorias':
+            include 'modules/'.$_GET["path"].'.php';
+            break;
+        case 'productos':
+            include 'modules/'.$_GET["path"].'.php';
+            break;
+        case 'clientes':
+            include 'modules/'.$_GET["path"].'.php';
+            break;
+        case 'ventas':
+            include 'modules/'.$_GET["path"].'.php';
+            break;
+        case 'crear-venta':
+            include 'modules/'.$_GET["path"].'.php';
+            break;
+        case 'reportes':
+            include 'modules/'.$_GET["path"].'.php';
+            break;        
+        default:
+            include 'modules/404.php';
+            break;
+    }
+
+    //if($_GET["path"]=="")
+      
+
+  }else{
+    include 'modules/home.php';
+  }
+
+   include 'modules/footer.php';
+
+   echo '</div>'; //fin wrapper
+
+}else{
+  include 'modules/login.php';
+}
+   ?>
 
  
-  <!-- ==================ASIDE============================= -->
 
- 
-</div>
+
+
+  <!-- Control Sidebar MENU DE CONFIRACIONES DEL TEMA--> 
+  <!-- <aside class="control-sidebar control-sidebar-dark"> -->
+    <!-- Control sidebar content goes here -->
+  <!-- </aside> -->
+  <!-- /.control-sidebar -->
+
 <!-- ./wrapper -->
-        <!-- JS -->
-<!-- jQuery 3 -->
-<script src="views/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="views/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="views/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="views/bower_components/fastclick/lib/fastclick.js"></script>
+
+<!-- jQuery -->
+<script src="views/dist/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="views/dist/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="views/dist/js/adminlte.min.js"></script>
-
+<!-- <script src="views/dist/js/adminlte.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<!-- <script src="views/dist/js/demo.js"></script> -->
 <script src="./views/js/plantilla.js"></script>
-
 </body>
 </html>

@@ -1,54 +1,91 @@
-<aside class="main-sidebar">
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
+    <!-- Brand Logo -->
+    <a href="home" class="brand-link">
+        <img src="views/img/plantilla/logo-blanco-lineal.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">POS</span>
+    </a>
+
+    <div class="sidebar">
+
+        <nav class="mt-2">
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="header">MENU PRINCIPAL</li>
+                <li class="nav-item">
+                    <a href="home" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            INICIO
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="usuarios" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Usuarios
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="categorias" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Categorias
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="productos" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Productos
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="clientes" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Clientes
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Ventas
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="ventas" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Administrar ventas</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="crear-venta" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Crear venta</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reportes" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Reporte venta</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
 
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" data-widget="tree">
-            <li class="header">MENU PRINCIPAL</li>
-            <li class="active">
-                <a href="home">
-                    <i class="fa fa-dashboard"></i> <span>INICIO</span>
-                </a>
-            </li>
-            <li>
-                <a href="usuarios">
-                    <i class="fa fa-dashboard"></i> <span>Usuarios</span>
-                </a>
-            </li>
-            <li>
-                <a href="categorias">
-                    <i class="fa fa-dashboard"></i> <span>Categorias</span>
-                </a>
-            </li>
-            <li>
-                <a href="productos">
-                    <i class="fa fa-dashboard"></i> <span>Productos</span>
-                </a>
-            </li>
-            <li>
-                <a href="clientes">
-                    <i class="fa fa-dashboard"></i> <span>Clientes</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-files-o"></i>
-                    <span>Ventas</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="ventas"><i class="fa fa-circle-o"></i> Administrar ventas</a></li>
-                    <li><a href="crear-venta"><i class="fa fa-circle-o"></i> Crear venta</a></li>
-                    <li><a href="reportes"><i class="fa fa-circle-o"></i> Reporte venta</a></li>
-                    
-                </ul>
-            </li>
 
-
-        </ul>
-    </section>
+            </ul>
+        </nav>
+    </div>
     <!-- /.sidebar -->
 </aside>

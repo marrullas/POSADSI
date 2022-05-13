@@ -1,4 +1,4 @@
 
 // sideba menu
 
- $('.sidebar-menu').tree()
+// $('.sidebar-menu').tree()
